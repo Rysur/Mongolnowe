@@ -27,7 +27,7 @@ stanowisko_id INT NOT NULL REFERENCES stanowiska(id_stanowiska)
 5. DELETE FROM nazwa_tabeli WHERE nazwa_kolumny="przykładowy_tekst";
 6. INSERT INTO nazwa_tabeli VALUES ("przykładowy tekst");
 7. UPDATE INTO nazwa_tabeli VALUES ("przykładowy tekst");
-8. DELETE FROM nazwa_tabeli;
+8. DELETE FROM nazwa_tabeli WHERE nazwa_kolumny="przykładowy_tekst";
 9. INSERT INTO nazwa_tabeli VALUES ("przykładowy tekst");
 10. UPDATE INTO nazwa_tabeli VALUES ("przykładowy tekst");
 11. CREATE INDEX nazwa_indeksu ON nazwa_tabeli;
