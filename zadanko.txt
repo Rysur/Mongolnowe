@@ -1,0 +1,36 @@
+ćw.1
+
+CREATE DATABASE firma_bera;
+USE firma_bera;
+CREATE TABLE stanowiska 
+(
+id_stanowiska INT PRIMARY KEY AUTO_INCREMENT,
+nazwa VARCHAR(20) UNIQUE NOT NULL,
+pensja DECIMAL(7,2) NOT NULL
+)
+CREATE TABLE pracownicy
+(
+id_pracownika INT PRIMARY KEY AUTO_INCREMENT,
+imie VARCHAR(20) NOT NULL,
+nazwisko VARCHAR(20) NOT NULL,
+data_ur DATE NOT NULL, 
+pesel CHAR(11) UNIQUE NOT NULL, 
+miasto VARCHAR(20) NOT NULL,
+stanowisko_id INT NOT NULL REFERENCES stanowiska(id_stanowiska)
+)
+
+ćw.3
+1. ALTER TABLE nazwa_tabeli CHANGE COLUMN nazwa_kolumny nowa_nazwa_kolumny INTEGER;
+2. DROP TABLE nazwa_tabeli;
+3. ALTER TABLE nazwa_tabeli RENAME nowa_nazwa_tabeli;
+4. DELETE FROM nazwa_tabeli;
+5. DELETE FROM nazwa_tabeli WHERE nazwa_kolumny="przykładowy_tekst";
+6. INSERT INTO nazwa_tabeli VALUES ("przykładowy tekst");
+7. UPDATE INTO nazwa_tabeli VALUES ("przykładowy tekst");
+8. DELETE FROM nazwa_tabeli;
+9. INSERT INTO nazwa_tabeli VALUES ("przykładowy tekst");
+10. UPDATE INTO nazwa_tabeli VALUES ("przykładowy tekst");
+11. CREATE INDEX nazwa_indeksu ON nazwa_tabeli;
+12. DELETE INDEX nazwa_indeksu ON nazwa_tabeli;
+13. SELECT * FROM nazwa_tabeli LIMIT 5;
+14. SELECT * FROM nazwa_tabeli WHERE 2-4
